@@ -1,5 +1,4 @@
 class CreateUsers < ActiveRecord::Migration[6.0]
-  has_many :tasks
   def change
     create_table :users do |t|
       t.string :name
