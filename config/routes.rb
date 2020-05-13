@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   end
 
   resources :tasks, only: %i[create update]
+
+  namespace :api do
+    get 'login', to: 'login#show'
+    resources :tasks, only: %i[index create update]
+  end
 end
