@@ -10,7 +10,7 @@
 <ul>
     <% @tasks.each do |task| %>
         <li>
-            <%= check_box_tag "finished#{task.id}", true, task.finifhed, data: { id: task.id }, disabled: (@user != current_user) %>
+            <%= check_box_tag "finished#{task.id}", true, task.finished, data: { id: task.id }, disabled: (@user != current_user) %>
             <%= label_tag "finished#{task.id}", task.name %>
         </li>
     <% end %>
